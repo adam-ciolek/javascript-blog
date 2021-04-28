@@ -1,8 +1,10 @@
 'use strict';
 
 function titleClickHandler(event){
+  event.preventDefault();
   const clickedElement = this;
   console.log(event);
+  
 
   /* remove class 'active' from all article links  */
 
