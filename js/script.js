@@ -25,6 +25,8 @@ const activeArticles = document.querySelectorAll('.posts .post');
       activeArticle.classList.remove('active');
   }
   /* get 'href' attribute from the clicked link */
+  const articleSelector = document.getElementById('#article-1');
+  articleSelector.clickedElement('href');
 
   /* find the correct article using the selector (value of 'href' attribute) */
 
