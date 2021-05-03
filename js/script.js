@@ -47,6 +47,8 @@ function generateTitleLinks(){
   titleList.innerHTML = ''; 
   /* for each article */
 
+  let html = '';
+
   const articles = document.querySelectorAll(optArticleSelector);
   for(let article of articles){
   /* get the article id */
@@ -61,8 +63,15 @@ function generateTitleLinks(){
   console.log(linkHTML);
 
   /* insert link into titleList */
-  titleList.innerHTML = titleList.innerHTML + linkHTML;
+
+  //titleList.innerHTML = titleList.innerHTML + linkHTML;
+  titleList.insertAdjacentHTML('beforeend', linkHTML);
+  html = html + linkHTML;
   }
+
+  titleList.innerHTML = html;
+  console.log(html);
+  
 }
 
 generateTitleLinks();
