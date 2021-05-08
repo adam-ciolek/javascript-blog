@@ -167,27 +167,26 @@ addClickListenersToTags();
 
 
 
-
 //My own code
 
 function generateAuthors(){
   //find all authors
   const authorLists = document.querySelectorAll(optArticleSelector);
-  //for every authors
+  console.log(authorLists);
+  //Start loop :for every authors
   for(let authorList of authorLists){
     //find tag author
     const wrapperTag = authorList.querySelector(optArticleAuthorSelector);
     console.log(wrapperTag);
-    /* make html variable with empty string */
-    let html = authorTags;
-    console.log(html);
-    /* get tags from author-tags attribute */
+    // get tags from author-tags attribute 
     const authorTags = authorList.getAttribute('data-author');
     console.log(authorTags);
     
-  }
-    wrapperTag.innerHTML = html;
+    wrapperTag.innerHTML = authorTags;
+  } 
+  //end loop for every authors
 }
+generateAuthors();
 
 function addClickListenersToAuthors(){
 
